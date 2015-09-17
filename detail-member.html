@@ -1,0 +1,343 @@
+---
+layout: dashboard
+---
+
+<div class="sidebar">
+    <div class="site-headers">
+        <img src="img/logo.png" alt="">
+    </div>
+    <div class="site-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="svg/categories.svg">
+                    <span>Kategori</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="svg/cloth.svg">
+                    <span>Produk <i class="badge badge--red">45</i></span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                    <img src="svg/cart-full.svg">
+                    <span>Transaksi <i class="badge badge--red">3245</i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="svg/woman.svg"> <span>Pelanggan</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/nurse.svg"> <span>Administrator</span></a>
+            </li>
+        </ul>
+    </div>
+    <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
+</div>
+<div class="mainbar">
+    <div class="page">
+        <div class="page-header">
+            <div class="container">
+                <ul class="page-header__breadcrumb">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Member</a></li>
+                </ul>
+                <h1 class="page-header__title">
+                Detail Member
+                    </h1>
+                <!-- <div class="page-header__tabnav">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn--line active">Baru</a>
+                            <a href="#" class="btn btn--line">Arsip</a>
+                            <a href="#" class="btn btn--line">Batal</a>
+                        </div>
+                    </div> -->
+                <!-- <div class="page-header__control pull-right">
+                        <a href="#" class="btn btn--red">Tambah Order</a>
+                    </div> -->
+            </div>
+        </div>
+        <div class="page-body">
+
+
+            <div class="page-content">
+
+
+
+                        <div class="profile-card vcard">
+                            <div class="row">
+                                <div class="col">
+
+                                    <div class="avatar">
+                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/pixeliris/128.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h2 class="fn">Soraya Indah</h2>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div>member biasa</div>
+                                            <div>24 Poin</div>
+                                            <div><a href="tel:+62 899234234">+62 899234234</a></div>
+                                            <div><a href="mailto:soraya.indah@gmx.com">soraya.indah@gmx.com</a></div>
+                                        </div>  
+                                        <div class="col">
+                                            <div class="adr">
+                                                <span>Jl. Kaliurang KM 5.5</span>
+                                                <br>
+                                                <span>Caturtunggal,</span>
+                                                <span>Depok</span>
+                                                <br>
+                                                <span>Sleman,</span>
+                                                <span>Yogyakarta</span>
+                                                <br>
+                                                <span>55284</span>
+                                            </div>
+                                        </div>  
+                                    </div>
+
+
+                                </div>
+                                
+                            </div>
+
+                            <div class="profile-card__control">
+                                <a href="" class="btn btn--default">Edit profile</a> 
+                            </div>
+                        </div>
+
+                        <div class="tabnav">
+                        <ul>
+                        <li class="active"><a href="#">Transaksi</a></li>
+                        <li><a href="#">Referal</a></li>
+                        </ul>
+
+                        </div>
+
+
+
+                        <div class="page-heading">
+                <div class="container">
+                    <h2>Menampilkan 3 Transaksi</h2>
+
+                    <div class="page-header__control pull-right">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn--default"><img src="svg/refresh.svg" alt=""> Refresh</a>
+                            <a href="#" class="btn btn--default"><img src="svg/csv.svg" alt=""> Export</a>
+                        </div>
+                        <a href="#" class="btn btn--blue">Transaksi Baru</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+                        <div class="list">
+            
+
+
+                            <table class="table">
+
+            <thead>
+                <tr id="orders-table-header">
+                    <th class="nowrap"><a href="#" data-sort="public_id" class="table-sorter default">Order ID</a></th>
+                    <th><a href="#" data-sort="created" class="table-sorter descending">Pemesanan</a></th>
+                    <th><a href="#" data-sort="billing_name" class="table-sorter default">Pembayaran</a></th>
+                    <th><a href="#" data-sort="delivery_name" class="table-sorter default">Pengiriman</a></th>
+                    <th><a href="#" class="table-sorter default">Jumlah</a></th>
+                    <th><a href="#" class="table-sorter default">Status</a></th>
+                    <th><a href="#" class="table-sorter default">Review</a></th>
+
+                    <th style="width:1%">
+                        &nbsp;
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody id="orders-data-table">
+            
+                
+
+<tr data-order-id="c093d3ea-99d7-49f6-930f-12aeaafc0e12">
+    <td class="nowrap">
+        <a href="orders/detail/c093d3ea-99d7-49f6-930f-12aeaafc0e12" class="orderDetailLink" data-toggle="modal" data-modal-target="#orderModal" data-load-remote="orders/c093d3ea-99d7-49f6-930f-12aeaafc0e12" data-remote-target="#orderModal .modal-body" data-remote-div="order-detail-container">01123405858787</a>
+    </td>
+    <td class="nowrap">
+        3 jam yang lalu
+    </td>
+    <td>
+        <a href="#">user manado</a>
+        <small><a href="mailto:"></a></small>
+        <small>621123405858</small>
+    </td>
+    <td>
+        <a href="#">user manado</a>
+        <small><a href="mailto:"></a></small>
+        <small>Manado — Sulawesi Utara</small>
+    </td>
+    <td class="nowrap">
+        264.000
+        <small>Bank Transfer</small>
+    </td>
+    <td class="nowrap" data-order-status="">
+        <span class="badge badge--orange">Verifying</span>
+    </td>
+    <td class="nowrap">
+        &mdash;
+    </td>
+    <td>
+        <div class="dropdown">
+            <a href="#" class="btn btn--line">
+                <img src="svg/cog.svg" alt="">
+                <span class="caret"></span>
+            </a>    
+        </div>
+    </td>
+</tr>
+
+            
+                
+
+<tr data-order-id="82d68165-b6f6-4395-93fd-febfc3eb9ed2">
+    <td class="nowrap">
+        <a href="orders/detail/82d68165-b6f6-4395-93fd-febfc3eb9ed2" class="orderDetailLink" data-toggle="modal" data-modal-target="#orderModal" data-load-remote="orders/82d68165-b6f6-4395-93fd-febfc3eb9ed2" data-remote-target="#orderModal .modal-body" data-remote-div="order-detail-container">01123405858624</a>
+    </td>
+    <td class="nowrap">
+        3 jam yang lalu
+    </td>
+    <td>
+        <a href="#">user manado</a>
+        <small><a href="mailto:"></a></small>
+        <small>621123405858</small>
+    </td>
+    <td>
+        <a href="#">user manado</a>
+        <small><a href="mailto:"></a></small>
+        <small>621123405858</small>
+    </td>
+    <td class="nowrap">
+        264.000
+        <small>COD</small>
+    </td>
+    <td class="nowrap" data-order-status="">
+        <span class="badge badge--green">Shipped</span>
+    </td>
+    <td class="nowrap">
+        <div class="star-rating">
+            <div class="star-rating__icon"></div>
+            <div class="star-rating__icon"></div>
+            <div class="star-rating__icon"></div>
+            <div class="star-rating__icon"></div>
+        </div>
+    </td>
+    <td>
+        <div class="dropdown">
+            <a href="#" class="btn btn--line">
+                <img src="svg/cog.svg" alt="">
+                <span class="caret"></span>
+            </a>    
+        </div>
+    </td>
+</tr>
+
+            
+                
+
+<tr data-order-id="012fed13-785b-4c43-b5a2-a1156cf6654f"></td>
+    <td class="nowrap">
+        <a href="orders/detail/012fed13-785b-4c43-b5a2-a1156cf6654f" class="orderDetailLink" data-toggle="modal" data-modal-target="#orderModal" data-load-remote="orders/012fed13-785b-4c43-b5a2-a1156cf6654f" data-remote-target="#orderModal .modal-body" data-remote-div="order-detail-container">0341230905858826</a>
+    </td>
+    <td class="nowrap">
+        3 jam yang lalu
+    </td>
+    <td>
+        <a href="#">"user_java</a>
+        <small><a href="mailto:"></a></small>
+        <small>62341230905858</small>
+    </td>
+    <td>
+        <a href="#">"user_java</a>
+        <small><a href="mailto:"></a></small>
+        <small>62341230905858</small>
+    </td>
+    <td class="nowrap">
+        264.000
+        <small>Bank Transfer</small>
+    </td>
+    <td class="nowrap" data-order-status="">
+        <span class="badge badge--green">Shipped</span>
+    </td>
+    <td class="nowrap">
+        <div class="star-rating">
+            <div class="star-rating__icon"></div>
+            <div class="star-rating__icon"></div>
+            <div class="star-rating__icon"></div>
+            <div class="star-rating__icon"></div>
+            <div class="star-rating__icon"></div>
+        </div>
+    </td>
+    <td>
+        <div class="dropdown">
+            <a href="#" class="btn btn--line">
+                <img src="svg/cog.svg" alt="">
+                <span class="caret"></span>
+            </a>    
+        </div>
+    </td>
+</tr>
+
+            
+
+            
+            </tbody>
+        </table>
+
+
+        <div class="pagination">
+                    <ul>
+                        <li><a href="#">First</a></li>
+                        <li><a href="#">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><span>…</span></li>
+                        <li><a href="#">235</a></li>
+                        <li><a href="#">236</a></li>
+                        <li><a href="#">237</a></li>
+                        <li><a href="#">238</a></li>
+                        <li><a href="#">239</a></li>
+                        <li><a href="#">Next</a></li>
+                        <li><a href="#">Last</a></li>
+                    </ul>
+                </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>

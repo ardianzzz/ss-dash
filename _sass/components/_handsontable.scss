@@ -1,0 +1,461 @@
+@keyframes wtFadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes wtFadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+
+.handsontable {
+  position: relative;
+  &.htAutoColumnSize {
+    visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  table, tbody, thead, td, th, div {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+  }
+  table.htCore {
+    border-collapse: separate;
+    /*it must be separate, otherwise there are offset miscalculations in WebKit: http://stackoverflow.com/questions/2655987/border-collapse-differences-in-ff-and-webkit*/
+    position: relative;
+    /*this actually only changes appearance of user selection - does not make text unselectable
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    /*user-select: none; /*no browser supports unprefixed version*/
+    border-spacing: 0;
+    margin: 0;
+    border-width: 0;
+    table-layout: fixed;
+    width: 0;
+    outline-width: 0;
+    /* reset bootstrap table style. for more info see: https://github.com/warpech/jquery-handsontable/issues/224 */
+    max-width: none;
+    max-height: none;
+  }
+  col {
+    width: 50px;
+    &.rowHeader {
+      width: 50px;
+    }
+  }
+  th {
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    height: 22px;
+    empty-cells: show;
+    line-height: 21px;
+    padding: 0 4px 0 4px;
+    /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */
+    background-color: #FFF;
+    vertical-align: top;
+    overflow: hidden;
+    outline-width: 0;
+    white-space: pre-line;
+    /* preserve new line character in cell */
+  }
+  td {
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    height: 22px;
+    empty-cells: show;
+    line-height: 21px;
+    padding: 0 4px 0 4px;
+    /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */
+    background-color: #FFF;
+    vertical-align: top;
+    overflow: hidden;
+    outline-width: 0;
+    white-space: pre-line;
+    /* preserve new line character in cell */
+    &.htInvalid {
+      -webkit-transition: background 0.75s ease;
+      transition: background 0.75s ease;
+      background-color: #ff4c42;
+    }
+  }
+  th:last-child {
+    /*Foundation framework fix*/
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+  }
+  tr:first-child th.htNoFrame {
+    border-left-width: 0;
+    background-color: white;
+    border-color: #FFF;
+  }
+  th {
+    &:first-child.htNoFrame, &.htNoFrame {
+      border-left-width: 0;
+      background-color: white;
+      border-color: #FFF;
+    }
+    &:first-child {
+      border-left: 1px solid #CCC;
+    }
+  }
+  td:first-child {
+    border-left: 1px solid #CCC;
+  }
+  .htNoFrame + {
+    th, td {
+      border-left: 1px solid #CCC;
+    }
+  }
+  tr:first-child {
+    th, td {
+      border-top: 1px solid #CCC;
+    }
+  }
+  thead tr {
+    &:last-child th, &.lastChild th {
+      border-bottom-width: 0;
+    }
+  }
+  th {
+    background-color: #EEE;
+    color: #222;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  thead th {
+    padding: 0;
+  }
+  th.active {
+    background-color: #CCC;
+  }
+  thead th .relative {
+    position: relative;
+    padding: 2px 4px;
+  }
+  .manualColumnMover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    width: 5px;
+    height: 25px;
+    z-index: 999;
+    cursor: move;
+  }
+  th .manualColumnMover {
+    &:hover, &.active {
+      background-color: #88F;
+    }
+  }
+  .manualColumnResizer {
+    position: absolute;
+    top: 0;
+    cursor: col-resize;
+  }
+  .manualColumnResizerHandle {
+    background-color: transparent;
+    width: 5px;
+    height: 25px;
+  }
+  .manualColumnResizer {
+    &:hover .manualColumnResizerHandle, &.active .manualColumnResizerHandle {
+      background-color: #AAB;
+    }
+  }
+  .manualColumnResizerLine {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #AAB;
+    display: none;
+    width: 0;
+    border-right: 1px dashed #777;
+  }
+  .manualColumnResizer.active .manualColumnResizerLine {
+    display: block;
+  }
+  .columnSorting:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .wtBorder {
+    position: absolute;
+    font-size: 0;
+  }
+  td.area {
+    background-color: #EEF4FF;
+  }
+  .wtBorder.corner {
+    font-size: 0;
+    cursor: crosshair;
+  }
+  .htBorder.htFillBorder {
+    background: red;
+    width: 1px;
+    height: 1px;
+  }
+}
+
+/* plugins */
+
+/* border line */
+
+/* fill handle */
+
+.handsontableInput {
+  border: 2px solid #5292F7;
+  outline-width: 0;
+  margin: 0;
+  padding: 1px 4px 0 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  /*repeat from .handsontable (inherit doesn't work with IE<8) */
+  line-height: 1.3em;
+  /*repeat from .handsontable (inherit doesn't work with IE<8) */
+  font-size: inherit;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  resize: none;
+  /*below are needed to overwrite stuff added by jQuery UI Bootstrap theme*/
+  display: inline-block;
+  color: #000;
+  border-radius: 0;
+  background-color: #FFF;
+  /*overwrite styles potentionally made by a framework*/
+}
+
+.handsontableInputHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.htSelectEditor {
+  -webkit-appearance: menulist-button !important;
+  position: absolute;
+}
+
+/*
+TextRenderer readOnly cell
+*/
+
+.handsontable {
+  .htDimmed {
+    color: #777;
+  }
+  .htPlaceholder {
+    color: #999;
+  }
+  .htAutocompleteArrow {
+    float: right;
+    font-size: 10px;
+    color: #EEE;
+    cursor: default;
+    width: 16px;
+    text-align: center;
+  }
+  td .htAutocompleteArrow:hover {
+    color: #777;
+  }
+  .htCheckboxRendererInput.noValue {
+    opacity: 0.5;
+  }
+  .htNumeric {
+    text-align: right;
+  }
+}
+
+/*
+TextRenderer placeholder value
+*/
+
+/*
+AutocompleteRenderer down arrow
+*/
+
+/*
+CheckboxRenderer
+*/
+
+/*
+NumericRenderer
+*/
+
+/*context menu rules*/
+
+ul.context-menu-list {
+  color: black;
+  li {
+    margin-bottom: 0;
+    /*Foundation framework fix*/
+  }
+}
+
+/**
+ * dragdealer
+ */
+
+.handsontable {
+  .dragdealer {
+    position: relative;
+    width: 9px;
+    height: 9px;
+    background: #F8F8F8;
+    border: 1px solid #DDD;
+    .handle {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background: #C5C5C5;
+    }
+    .disabled {
+      background: #898989;
+    }
+  }
+  .handsontable {
+    .wtHider {
+      padding: 0 0 5px 0;
+    }
+    table {
+      -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+  }
+  &.listbox {
+    margin: 0;
+    table {
+      border: 1px solid #ccc;
+      border-collapse: separate;
+      background: white;
+    }
+    th {
+      border-width: 0;
+    }
+    tr {
+      &:first-child th, &:last-child th, &:first-child td {
+        border-width: 0;
+      }
+    }
+    td {
+      border-width: 0;
+    }
+    th {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    td {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &.htDimmed {
+        cursor: default;
+        color: inherit;
+        font-style: inherit;
+      }
+    }
+    .wtBorder {
+      visibility: hidden;
+    }
+    tr {
+      td.current, &:hover td {
+        background: #eee;
+      }
+    }
+  }
+}
+
+/**
+ * Handsontable in Handsontable
+ */
+
+/**
+ * Handsontable listbox theme
+ */
+
+.htContextMenu {
+  display: none;
+  position: absolute;
+  z-index: 7777;
+  table.htCore {
+    outline: 1px solid #bbb;
+  }
+  .wtBorder {
+    visibility: hidden;
+  }
+  table tbody tr td {
+    background: white;
+    border-width: 0;
+    padding: 4px 6px 0px 6px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &:first-child {
+      border: 0;
+    }
+    &.htDimmed {
+      font-style: normal;
+      color: #323232;
+    }
+    &.current {
+      background: rgb(233, 233, 233);
+    }
+    &.htSeparator {
+      border-top: 1px solid #bbb;
+      height: 0;
+      padding: 0;
+    }
+    &.htDisabled {
+      color: #999;
+      &:hover {
+        background: white;
+        color: #999;
+        cursor: default;
+      }
+    }
+  }
+}
+
+/*WalkontableDebugOverlay*/
+
+.wtDebugHidden {
+  display: none;
+}
+
+.wtDebugVisible {
+  display: block;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: wtFadeInFromNone;
+  animation-duration: 0.5s;
+  animation-name: wtFadeInFromNone;
+}

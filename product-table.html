@@ -1,0 +1,193 @@
+---
+layout: dashboard
+---
+
+<div class="sidebar">
+    <div class="site-headers">
+        <img src="img/logo.png" alt="">
+    </div>
+    <div class="site-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="svg/categories.svg"> 
+                    <span>Kategori</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                    <img src="svg/cloth.svg"> 
+                    <span>Produk <i class="badge badge--red">45</i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="svg/cart-full.svg"> 
+                    <span>Transaksi <i class="badge badge--red">3245</i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="svg/woman.svg"> <span>Pelanggan</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/nurse.svg"> <span>Administrator</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
+</div>
+<div class="mainbar">
+
+        <div class="page">
+            <div class="page-header">
+                <div class="container">
+                    <ul class="page-header__breadcrumb">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Produk</a></li>
+                    </ul>
+                    <h1 class="page-header__title">
+                    Produk
+                       </h1>
+               <!--  <div class="page-header__tabnav">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn--line active">Baru</a>
+                        <a href="#" class="btn btn--line">Arsip</a>
+                    </div>
+                </div>
+                <div class="page-header__control pull-right">
+                    <a href="#" class="btn btn--red">Tambah Produk</a>
+                </div> -->
+                </div>
+                <div class="page-filter">
+                    <div class="page-filter__control">
+                        <ul class="pull-left">
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown"><img src="svg/list.svg" alt=""> Table <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="product.html">Grid</a></li>
+                                    <li><a href="product-table.html">Table</a></li>
+                                </ul>
+                            </li>
+                            <li class="toggle">
+                                <a href="#" class="toggle-filter"><img src="svg/filter.svg" alt=""> Filter <span class="caret"></span></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown">
+                                    <img src="svg/todo.svg" alt=""> Bulk action <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Paid</a></li>
+                                    <li><a href="#">Shipped</a></li>
+                                    <li><a href="#">Canceled</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><img src="svg/refresh.svg" alt=""> Refresh</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="svg/csv.svg" alt=""> Export</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pull-right">
+                            <div class="page-search">
+                                <input type="search" class="form-control" placeholder="Masukkan kata kunci&hellip;">
+                                <button type="submit"><img src="svg/search.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-filter__toggle">
+                        <form id="filter-form">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="hidden" name="timeZone" id="timeZone" value="Asia/Jakarta">
+                                    <div class="form-group">
+                                        <label class="form-label">Order ID</label>
+                                        <input name="orderId" type="text" class="form-control form-control--small" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Nama</label>
+                                        <input name="name" type="text" class="form-control form-control--small" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input name="email" type="text" class="form-control form-control--small" value="">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label class="form-label">Keterangan</label>
+                                        <input name="remarks" type="text" class="form-control form-control--small" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Status</label>
+                                        <select class="form-control form-control--small" name="status">
+                                            <option value="">Semua</option>
+                                            <option value="pending">Pending</option>
+                                            <option value="verifying_payment">Verifying Payment</option>
+                                            <option value="processing">Sudah di bayar</option>
+                                            <option value="cancelled">Batal</option>
+                                            <option value="shipped">Terkirim</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Pembayaran</label>
+                                        <select class="form-control form-control--small" name="paymentMethod">
+                                            <option value="">Semua</option>
+                                            <option value="bank_transfer">Bank Transfer</option>
+                                            <option value="cod">COD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label class="form-label">Jumlah</label>
+                                        <div class="form-input form-input--daterange">
+                                            <input type="text" class="form-control form-control--small" placeholder="Tanggal awal">
+                                            <input type="text" class="form-control form-control--small" placeholder="Tanggal akhir">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Tanggal</label>
+                                        <div class="form-input form-input--daterange">
+                                            <input type="text" class="form-control form-control--small" id="datePickerStart" placeholder="Tanggal awal">
+                                            <input type="text" class="form-control form-control--small" id="datePickerEnd" placeholder="Tanggal akhir">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">SKU</label>
+                                        <input name="sku" type="text" class="form-control form-control--small" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-action">
+                                <a id="reset-btn" class="btn btn--default btn--small">Reset</a>
+                                <button class="btn btn--blue btn--small">Filter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body">
+                
+                {% include data-product.html %}
+
+            </div>
+        </div>
+    </div>
+

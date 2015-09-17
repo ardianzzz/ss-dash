@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+	
+    <head>
+        <meta charset="utf-8">
+        <title>Sale Stock Indonesia</title>
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+
+        <link rel="stylesheet" href="css/dashboard.css">
+        <script type="text/javascript" src="js/vendor/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+
+        <script type="text/javascript" src="js/vendor/d3.min.js"></script>
+        <script type="text/javascript" src="js/vendor/c3.min.js"></script>
+        <script type="text/javascript" src="js/parser-simple.js"></script>
+        <script type="text/javascript" src="js/editor-toolbar.js"></script>
+        <script type="text/javascript" src="js/handsontable.js"></script>
+        <script type="text/javascript" src="js/dropzone.js"></script>
+        <script type="text/javascript" src="js/chosen.js"></script>
+        <script type="text/javascript" src="js/pikaday.js"></script>
+        <script type="text/javascript" src="js/masonry.js"></script>
+
+        <script type="text/javascript" src="js/x-editable.js"></script>
+
+
+
+        <script type="text/javascript">
+
+
+
+        	$.fn.OneClickSelect = function () {
+  return $(this).on('click', function () {
+
+    // In here, "this" is the element
+
+    var range, selection;
+
+    // non-IE browsers account for 60% of users, this means 60% of the time,
+    // the two conditions are evaluated since you check for IE first. 
+
+    // Instead, reverse the conditions to get it right on the first check 60% of the time.
+
+    if (window.getSelection) {
+      selection = window.getSelection();
+      range = document.createRange();
+      range.selectNodeContents(this);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    } else if (document.body.createTextRange) {
+      range = document.body.createTextRange();
+      range.moveToElementText(this);
+      range.select();
+    }
+  });
+};
+
+        
+        	$(document).ready(function() {
+
+
+				var msnry = new Masonry( '.product-masonry', {
+                  itemSelector: '.product-masonry__brick',
+                });
+
+
+				$('[data-tooltip]').tooltip({
+			    	container:'body'
+			    });
+
+			    $("[data-select").chosen();
+
+
+			    $('.toggle-filter').click(function(){
+			    	$(this).parent().toggleClass('open').trigger("chosen:updated");
+			    	$('.page-filter__toggle').toggleClass('open');
+			    	$('[data-toggle="dropdown"]').parent().removeClass('open');
+			    	return false;
+			    });
+
+
+			    $('.sidebar-toggle').click(function () {
+			    	$('body').toggleClass('sidebar-collapse');
+			    	msnry.layout();
+			    	$("[data-select").chosen();
+
+
+			    });
+
+				$('.autoselect').OneClickSelect();
+			
+
+
+			});
+
+        </script>
+    </head>
+
+    <body class="sidebar-collapse">
+
+    	<header class="site-header" id="site-header" role="banner">
+			    <div class="site-header__logo">
+			    	<a href="/">
+			        	<img src="img/logo.png" alt="Sale Stock Dashboard">
+			        </a>
+			    </div>
+			  
+
+
+			        <ul class="site-header__user">
+			            <li>
+			            	<a href="#">
+			            		<div class="site-header__avatar">
+			            			<img src="img/cewe.png" alt="">
+			            		</div>
+
+			            		<span>
+			            			Mbak Yeyen
+			            		</span>
+			            	</a>
+			            </li>
+			            <li>
+
+			            	<a href="#">
+			            		<img src="svg/shutdown.svg" alt="Logout">
+			            	</a>
+			            </li>
+			        </ul>
+			    </div>
+
+		</header>
+
+		<!-- <div class="site-search">
+		    <div class="container">
+		        <div class="form-group form-group--flex">
+		            <div class="form-group__input">
+		                <input type="text" class="form-control" placeholder="Cari produk&hellip;">
+		            </div>
+		            <div class="form-group__btn">
+		                <button type="submit" class="btn btn--blue">Go</button>
+		            </div>
+		        </div>
+		    </div>
+		</div> -->
+
+
+    <div class="main" id="main" role="main">
+
+
+
+
+      {{ content }}
+    </div>
+<!-- 
+    <footer class="site-footer" id="site-footer">
+		<div class="container">
+			<div class="site-footer__copy">
+				<small>&copy; 2015 Sale Stock Indonesia</small>
+			</div>
+		</div>
+	</footer> -->
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
+
+

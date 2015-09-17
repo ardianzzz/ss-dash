@@ -1,0 +1,333 @@
+---
+layout: dashboard
+---
+
+<div class="sidebar">
+    <div class="site-headers">
+        <img src="img/logo.png" alt="">
+    </div>
+    <div class="site-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="svg/categories.svg">
+                    <span>Kategori</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="svg/cloth.svg">
+                    <span>Produk <i class="badge badge--red">45</i></span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                    <img src="svg/cart-full.svg">
+                    <span>Transaksi <i class="badge badge--red">3245</i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="svg/woman.svg"> <span>Pelanggan</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/nurse.svg"> <span>Administrator</span></a>
+            </li>
+        </ul>
+    </div>
+    <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
+</div>
+<div class="mainbar">
+    <div class="page">
+        <div class="page-header">
+            <div class="container">
+                <ul class="page-header__breadcrumb">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Produk</a></li>
+                </ul>
+                <h1 class="page-header__title">
+                        Tambah Produk
+                    </h1>
+                <!-- <div class="page-header__tabnav">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn--line active">Baru</a>
+                            <a href="#" class="btn btn--line">Arsip</a>
+                            <a href="#" class="btn btn--line">Batal</a>
+                        </div>
+                    </div> -->
+                <!-- <div class="page-header__control pull-right">
+                        <a href="#" class="btn btn--red">Tambah Order</a>
+                    </div> -->
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="page-content">
+                <div class="container">
+
+                    <div class="page-content__form">
+                    <div class="row">
+                        <div class="col col--8">
+
+                            <fieldset>
+                                <legend>Informasi umum</legend>
+                                    <div class="form-image">
+                                        <div class="dropzone" id="uploader"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label form-label--required">Kode</label>
+                                        <div class="form-input">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label form-label--required">Nama</label>
+                                        <div class="form-input">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Kategori</label>
+                                        <div class="form-input">
+                                            <select class="form-control" data-select>
+                                                <option>Tidak ada</option>
+                                                <option>Atasan</option>
+                                                <option>&mdash; Blouse</option>
+                                                <option>&mdash; &mdash; Transparent Blouse</option>
+                                                <option>Bawahan</option>
+                                                <option>Baju tidur</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Deskripsi</label>
+                                        <div class="text-editor">
+                                            <div class="text-editor__header" id="toolbar" style="display: none;">
+                                                <ul class="text-editor__toolbar">
+                                                    <li>
+                                                        <a data-wysihtml5-command="bold" title="CTRL+B">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                                                                <path d="M22.12 15.145C23.294 13.753 24 11.957 24 10c0-4.41-3.59-8-8-8H6v28h12c4.41 0 8-3.59 8-8 0-2.905-1.556-5.453-3.88-6.855zM12 6h3.172c1.75 0 3.172 1.794 3.172 4s-1.423 4-3.172 4H12V6zm4.97 20H12v-8h4.97c1.826 0 3.312 1.794 3.312 4s-1.486 4-3.313 4z" />
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a data-wysihtml5-command="italic" title="CTRL+I">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                                                                <path d="M28 2v2h-4L14 28h4v2H4v-2h4L18 4h-4V2z" />
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a data-wysihtml5-command="createLink">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                                                                <path d="M29.794 2.333l-.126-.126c-2.942-2.942-7.756-2.942-10.698 0l-6.816 6.817c-2.942 2.942-2.942 7.756 0 10.697l.126.127c.245.245.505.466.773.67l2.495-2.494c-.29-.172-.566-.377-.816-.627l-.126-.126c-1.597-1.597-1.597-4.196 0-5.793l6.816-6.816c1.597-1.596 4.196-1.596 5.793 0l.126.127c1.598 1.597 1.598 4.197 0 5.793l-3.083 3.084c.535 1.322.79 2.73.767 4.137l4.77-4.768c2.94-2.942 2.94-7.756 0-10.697zm-10.074 9.82c-.245-.244-.505-.465-.773-.67l-2.495 2.496c.29.17.566.376.816.626l.126.126c1.597 1.597 1.597 4.196 0 5.793l-6.817 6.817c-1.597 1.597-4.196 1.597-5.793 0l-.126-.126c-1.597-1.598-1.597-4.196 0-5.793l3.084-3.084c-.535-1.323-.79-2.732-.767-4.138l-4.77 4.77c-2.94 2.94-2.94 7.755 0 10.697l.127.125c2.942 2.942 7.756 2.942 10.698 0l6.816-6.816c2.942-2.943 2.942-7.757 0-10.7l-.126-.125z" />
+                                                            </svg>
+                                                        </a>
+                                                        <div data-wysihtml5-dialog="createLink" class="editor-popup" style="display: none;">
+                                                            <table>
+                                                                <td>
+                                                                    Link:
+                                                                </td>
+                                                                <td>
+                                                                    <input class="form-control form-control--small" data-wysihtml5-dialog-field="href" value="http://">
+                                                                </td>
+                                                                <td style="white-space:nowrap">
+                                                                    <a data-wysihtml5-dialog-action="save" class="btn btn--red btn--small">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                                                            <path d="M448 71.9c-17.3-13.4-41.5-9.3-54.1 9.1L214 344.2l-99.1-107.3c-14.6-16.6-39.1-17.4-54.7-1.8-15.6 15.5-16.4 41.6-1.7 58.1 0 0 120.4 133.6 137.7 147 17.3 13.4 41.5 9.3 54.1-9.1l206.3-301.7c12.6-18.5 8.7-44.2-8.6-57.5z"></path>
+                                                                        </svg>
+                                                                    </a>
+                                                                    <a data-wysihtml5-dialog-action="cancel" class="btn btn--default btn--small">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                                                            <path d="M437.5 386.6L306.9 256l130.6-130.6c14.1-14.1 14.1-36.8 0-50.9-14.1-14.1-36.8-14.1-50.9 0L256 205.1 125.4 74.5c-14.1-14.1-36.8-14.1-50.9 0-14.1 14.1-14.1 36.8 0 50.9L205.1 256 74.5 386.6c-14.1 14.1-14.1 36.8 0 50.9 14.1 14.1 36.8 14.1 50.9 0L256 306.9l130.6 130.6c14.1 14.1 36.8 14.1 50.9 0 14-14.1 14-36.9 0-50.9z"></path>
+                                                                        </svg>
+                                                                    </a>
+                                                                </td>
+                                                            </table>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <a data-wysihtml5-command="insertUnorderedList">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                                                                <path d="M0 0h8v8H0zm12 2h20v4H12zM0 12h8v8H0zm12 2h20v4H12zM0 24h8v8H0zm12 2h20v4H12z" />
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a data-wysihtml5-command="insertOrderedList">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                                                                <path d="M12 26h20v4H12zm0-12h20v4H12zm0-12h20v4H12zM6 0v8H4V2H2V0zM4 16.438V18h4v2H2V15.44l4-1.875V12H2v-2h6v4.563zM8 22v10H2v-2h4v-2H2v-2h4v-2H2v-2z" />
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <textarea class="form-control" id="editor" placeholder="Masukkan deskripsi produk&hellip;" rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Variasi</label>
+                                        <div id="table"></div>
+                                    </div>
+                                </fieldset>
+                        </div>
+                        <div class="col col--4">
+                            <fieldset>
+                                <legend>Harga</legend>
+                                <div class="form-group">
+                                    <label class="form-label form-label--required">Harga jual normal</label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Harga sale</label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label form-label--required">Harga beli</label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Spesifikasi</legend>
+                                <div class="form-group">
+                                    <label class="form-label">Model</label>
+                                    <div class="form-input">
+                                        <select class="form-control" data-select>
+                                            <option>Tidak ada</option>
+                                            <option>Atasan</option>
+                                            <option>&mdash; Blouse</option>
+                                            <option>&mdash; &mdash; Transparent Blouse</option>
+                                            <option>Bawahan</option>
+                                            <option>Baju tidur</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Motif</label>
+                                    <div class="form-input">
+                                        <select class="form-control" multiple data-select>
+                                            <option>Tidak ada</option>
+                                            <option>Atasan</option>
+                                            <option>&mdash; Blouse</option>
+                                            <option>&mdash; &mdash; Transparent Blouse</option>
+                                            <option>Bawahan</option>
+                                            <option>Baju tidur</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Bahan</label>
+                                    <div class="form-input">
+                                        <select class="form-control" multiple data-select>
+                                            <option>Tidak ada</option>
+                                            <option>Atasan</option>
+                                            <option>&mdash; Blouse</option>
+                                            <option>&mdash; &mdash; Transparent Blouse</option>
+                                            <option>Bawahan</option>
+                                            <option>Baju tidur</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Brand</label>
+                                    <div class="form-input">
+                                        <select class="form-control" multiple data-select>
+                                            <option>Tidak ada</option>
+                                            <option>Atasan</option>
+                                            <option>&mdash; Blouse</option>
+                                            <option>&mdash; &mdash; Transparent Blouse</option>
+                                            <option>Bawahan</option>
+                                            <option>Baju tidur</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Opsi</legend>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="n">
+                                            <span>Tampilkan</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="n">
+                                            <span>Featured</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-action">
+                        <button type="submit" class="btn btn--default">Pratinjau</button>
+                        <button type="submit" class="btn btn--blue">Tambah produk</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var editor = new wysihtml5.Editor('editor', {
+    toolbar: 'toolbar',
+    parserRules: wysihtml5ParserRules
+});
+
+var myDropzone = new Dropzone("#uploader", {
+    url: "/img",
+    dictDefaultMessage: "Klik atau Drop gambar di sini untuk upload",
+    dictRemoveFile: "Hapus",
+    addRemoveLinks: "dictRemoveFile"
+});
+
+
+Dropzone.options.myAwesomeDropzone = false;
+// This is useful when you want to create the
+// Dropzone programmatically later
+
+// Disable auto discover for all elements:
+Dropzone.autoDiscover = false;
+
+$("#table").handsontable({
+    colHeaders: ['Size', 'Color', 'Product Code', 'Stock', 'Price'],
+    rowHeaders: true,
+    stretchH: 'all',
+    columnSorting: true,
+    contextMenu: true,
+    columns: [{
+        data: 'Size',
+    }, {
+        data: 'Color',
+    }, {
+        data: 'Product Code'
+    }, {
+        data: 'Stock',
+        type: 'numeric'
+    }, {
+        data: 'Price',
+        type: 'numeric'
+    }],
+});
+</script>

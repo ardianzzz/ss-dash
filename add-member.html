@@ -1,0 +1,368 @@
+---
+layout: dashboard
+---
+
+<div class="sidebar">
+    <div class="site-headers">
+        <img src="img/logo.png" alt="">
+    </div>
+    <div class="site-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="svg/categories.svg">
+                    <span>Kategori</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="svg/cloth.svg">
+                    <span>Produk <i class="badge badge--red">45</i></span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                    <img src="svg/cart-full.svg">
+                    <span>Transaksi <i class="badge badge--red">3245</i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="svg/woman.svg"> <span>Pelanggan</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="svg/nurse.svg"> <span>Administrator</span></a>
+            </li>
+        </ul>
+    </div>
+    <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
+</div>
+<div class="mainbar">
+    <div class="page">
+        <div class="page-header">
+            <div class="container">
+                <ul class="page-header__breadcrumb">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Member</a></li>
+                </ul>
+                <h1 class="page-header__title">
+                    Tambah Member
+                    </h1>
+                <!-- <div class="page-header__tabnav">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn--line active">Baru</a>
+                            <a href="#" class="btn btn--line">Arsip</a>
+                            <a href="#" class="btn btn--line">Batal</a>
+                        </div>
+                    </div> -->
+                <!-- <div class="page-header__control pull-right">
+                        <a href="#" class="btn btn--red">Tambah Order</a>
+                    </div> -->
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="page-content">
+                <div class="container">
+
+                    <div class="page-content__form">
+                    <div class="row">
+                        <div class="col col--7">
+
+                            <fieldset>
+                                <legend>Informasi umum</legend>
+
+                                <div class="form-group">
+                                    <label class="form-label">Gambar profil</label>
+                                    <div class="uploader">
+                                        <div class="drop">
+                                            <div id="image-preview">
+                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/pixeliris/128.jpg" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="uploader__label btn btn--default btn--small">
+                                                Cari gambar
+                                                <input type="file" id="file" name="file">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="form-label">Nama Lengkap</label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nomor Telepon</label>
+                                    <div class="form-input">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <div class="form-input">
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col col--6">
+                                            <div class="form-group">
+                                                <label class="form-label">Password</label>
+                                                <div class="form-input">
+                                                    <input type="password" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col--6">
+                                            <div class="form-group">
+                                                <label class="form-label">Ulangi Password</label>
+                                                <div class="form-input">
+                                                    <input type="password" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label class="form-label">Tanggal lahir</label>
+                                    <div class="form-input">
+                                        <div class="row">
+                                            <div class="col col--3">
+                                                <select class="form-control" data-select>
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                </select>
+                                            </div>
+                                            <div class="col col--6">
+                                                <select class="form-control" data-select>
+                                                    <option>Januari</option>
+                                                    <option>Februari</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="col col--3">
+                                                <select class="form-control" data-select>
+                                                    <option>2000</option>
+                                                    <option>2001</option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Terbitkan</label>
+                                    <div class="radio radio--inline">
+                                        <label>
+                                            <input type="radio" name="n">
+                                            <span>Perempuan</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio--inline">
+                                        <label>
+                                            <input type="radio" name="n">
+                                            <span>Laki-laki</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio--inline">
+                                        <label>
+                                            <input type="radio" name="n">
+                                            <span>N/A</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Detail alamat</legend>
+                                <div class="form-group">
+                                    <label class="form-label">Alamat</label>
+                                    <div class="form-input">
+                                        <textarea class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Provinsi</label>
+                                    <div class="form-input">
+                                        <select class="form-control" data-select>
+                                        <option>Pilih Provinsi</option>
+                                        <option value="Bali">Bali</option><option value="Bangka Belitung">Bangka Belitung</option><option value="Banten">Banten</option><option value="Bengkulu">Bengkulu</option><option value="DI Yogyakarta">DI Yogyakarta</option><option value="DKI Jakarta">DKI Jakarta</option><option value="Gorontalo">Gorontalo</option><option value="Jambi">Jambi</option><option value="Jawa Barat">Jawa Barat</option><option value="Jawa Tengah">Jawa Tengah</option><option value="Jawa Timur">Jawa Timur</option><option value="Kalimantan Barat">Kalimantan Barat</option><option value="Kalimantan Selatan">Kalimantan Selatan</option><option value="Kalimantan Tengah">Kalimantan Tengah</option><option value="Kalimantan Timur">Kalimantan Timur</option><option value="Kalimantan Utara">Kalimantan Utara</option><option value="Kepulauan Riau">Kepulauan Riau</option><option value="Lampung">Lampung</option><option value="Maluku">Maluku</option><option value="Maluku Utara">Maluku Utara</option><option value="Nanggroe Aceh Darussalam (NAD)">Nanggroe Aceh Darussalam (NAD)</option><option value="Nusa Tenggara Barat (NTB)">Nusa Tenggara Barat (NTB)</option><option value="Nusa Tenggara Timur (NTT)">Nusa Tenggara Timur (NTT)</option><option value="Papua">Papua</option><option value="Papua Barat">Papua Barat</option><option value="Riau">Riau</option><option value="Sulawesi Barat">Sulawesi Barat</option><option value="Sulawesi Selatan">Sulawesi Selatan</option><option value="Sulawesi Tengah">Sulawesi Tengah</option><option value="Sulawesi Tenggara">Sulawesi Tenggara</option><option value="Sulawesi Utara">Sulawesi Utara</option><option value="Sumatera Barat">Sumatera Barat</option><option value="Sumatera Selatan">Sumatera Selatan</option><option value="Sumatera Utara">Sumatera Utara</option></select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Kabupaten</label>
+                                    <div class="form-input">
+                                        <select class="form-control" data-select>
+                                            <option>Pilih Kabupaten</option>
+                                            <option>Pilih Kabupaten</option>
+                                            <option>Pilih Kabupaten</option>
+                                            <option>Pilih Kabupaten</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Kecamatan</label>
+                                    <div class="form-input">
+                                        <select class="form-control" data-select>
+                                            <option>Pilih Kecamatan</option>
+                                            <option>Pilih Kecamatan</option>
+                                            <option>Pilih Kecamatan</option>
+                                            <option>Pilih Kecamatan</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Kelurahan</label>
+                                    <div class="form-input">
+                                        <select class="form-control" data-select>
+                                            <option>Pilih Kelurahan</option>
+                                            <option>Pilih Kelurahan</option>
+                                            <option>Pilih Kelurahan</option>
+                                            <option>Pilih Kelurahan</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Kode Pos</label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+
+                        </div>
+                        <div class="col col--5">
+                            <fieldset>
+                                <legend>Fitur</legend>
+
+                                <div class="form-group">
+                                    <label class="form-label">Point</label>
+                                    <div class="form-input">
+                                        <input type="number" class="form-control" value="0">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Jenis member</label>
+                                    <div class="form-input">
+                                        <select class="form-control" data-select>
+                                            <option>Member biasa</option>
+                                            <option>Member spesial</option>
+                                            <option>Diblokir</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                            
+                            <fieldset>
+                                <legend>Fitur member spesial</legend>
+                                <div class="form-group">
+                                        <label class="form-label">Kode Refferal</label>
+                                        <div class="form-input">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Short URL (Manual)</label>
+                                        <div class="form-input">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Judul selamat datang</label>
+                                        <div class="form-input">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Pesan selamat datang</label>
+                                        <div class="form-input">
+                                            <textarea class="form-control" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Pesan selamat datang di 'Halamanku'</label>
+                                        <div class="form-input">
+                                            <textarea class="form-control" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Pesan undangan</label>
+                                        <div class="form-input">
+                                            <textarea class="form-control" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-action">
+                        <button type="submit" class="btn btn--blue">Tambah member</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var editor = new wysihtml5.Editor('editor', {
+    toolbar: 'toolbar',
+    parserRules: wysihtml5ParserRules
+});
+
+
+
+Dropzone.options.myAwesomeDropzone = false;
+// This is useful when you want to create the
+// Dropzone programmatically later
+
+// Disable auto discover for all elements:
+Dropzone.autoDiscover = false;
+
+$("#table").handsontable({
+    colHeaders: ['Size', 'Color', 'Product Code', 'Stock', 'Price'],
+    rowHeaders: true,
+    stretchH: 'all',
+    columnSorting: true,
+    contextMenu: true,
+    columns: [{
+        data: 'Size',
+    }, {
+        data: 'Color',
+    }, {
+        data: 'Product Code'
+    }, {
+        data: 'Stock',
+        type: 'numeric'
+    }, {
+        data: 'Price',
+        type: 'numeric'
+    }],
+});
+</script>
