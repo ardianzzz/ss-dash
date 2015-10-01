@@ -116,6 +116,7 @@ select.form-control {
     box-shadow: none;
     border-radius: .3rem;
     height: 3.2rem;
+    overflow: hidden;
     -webkit-appearance: menulist;
 }
 
@@ -123,20 +124,24 @@ select.form-control--small {
     height: 3.2rem;
 }
 
+
+select[multiple].form-control {
+    -webkit-appearance: listbox;
+}
 textarea.form-control {
     resize: vertical;
 }
 
 .form-group {
-    margin: 0 0 1.6rem;
+    margin: 0 0 1.2rem;
 
     .row {
-        margin:0 -.8rem;
+        margin:0 -.6rem;
 
     }
 
     .col {
-        padding:0 .8rem;
+        padding:0 .6rem;
     }
 
     &--flex {
@@ -540,7 +545,7 @@ padding:1.2rem 0 0;
 border-top:solid .1rem #eee;
 @extend .clearfix;
     .btn {
-        min-width:12rem;
+        min-width:8rem;
         margin:0 .8rem 0 0;
     }
 }
