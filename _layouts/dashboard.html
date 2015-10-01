@@ -1,178 +1,261 @@
 <!DOCTYPE html>
 <html>
 
-	
-    <head>
-        <meta charset="utf-8">
-        <title>Sale Stock Indonesia</title>
-        <meta name="description" content="">
+<head>
+    <meta charset="utf-8">
+    <title>Sale Stock Indonesia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script type="text/javascript" src="js/vendor/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/chosen.js"></script>
+    <script type="text/javascript" src="js/pikaday.js"></script>
+    <script type="text/javascript">
+    $.fn.OneClickSelect = function() {
+        return $(this).on('click', function() {
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+            // In here, "this" is the element
 
+            var range, selection;
 
+            // non-IE browsers account for 60% of users, this means 60% of the time,
+            // the two conditions are evaluated since you check for IE first. 
 
-        <link rel="stylesheet" href="css/dashboard.css">
-        <script type="text/javascript" src="js/vendor/jquery-2.1.0.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
+            // Instead, reverse the conditions to get it right on the first check 60% of the time.
 
-        <script type="text/javascript" src="js/vendor/d3.min.js"></script>
-        <script type="text/javascript" src="js/vendor/c3.min.js"></script>
-        <script type="text/javascript" src="js/parser-simple.js"></script>
-        <script type="text/javascript" src="js/editor-toolbar.js"></script>
-        <script type="text/javascript" src="js/handsontable.js"></script>
-        <script type="text/javascript" src="js/dropzone.js"></script>
-        <script type="text/javascript" src="js/chosen.js"></script>
-        <script type="text/javascript" src="js/pikaday.js"></script>
-        <script type="text/javascript" src="js/masonry.js"></script>
-
-        <script type="text/javascript" src="js/x-editable.js"></script>
-
-
-
-        <script type="text/javascript">
-
-
-
-        	$.fn.OneClickSelect = function () {
-  return $(this).on('click', function () {
-
-    // In here, "this" is the element
-
-    var range, selection;
-
-    // non-IE browsers account for 60% of users, this means 60% of the time,
-    // the two conditions are evaluated since you check for IE first. 
-
-    // Instead, reverse the conditions to get it right on the first check 60% of the time.
-
-    if (window.getSelection) {
-      selection = window.getSelection();
-      range = document.createRange();
-      range.selectNodeContents(this);
-      selection.removeAllRanges();
-      selection.addRange(range);
-    } else if (document.body.createTextRange) {
-      range = document.body.createTextRange();
-      range.moveToElementText(this);
-      range.select();
-    }
-  });
-};
-
-        
-        	$(document).ready(function() {
+            if (window.getSelection) {
+                selection = window.getSelection();
+                range = document.createRange();
+                range.selectNodeContents(this);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            } else if (document.body.createTextRange) {
+                range = document.body.createTextRange();
+                range.moveToElementText(this);
+                range.select();
+            }
+        });
+    };
 
 
-				var msnry = new Masonry( '.product-masonry', {
-                  itemSelector: '.product-masonry__brick',
-                });
+    $(document).ready(function() {
 
 
-				$('[data-tooltip]').tooltip({
-			    	container:'body'
-			    });
-
-			    $("[data-select").chosen();
 
 
-			    $('.toggle-filter').click(function(){
-			    	$(this).parent().toggleClass('open').trigger("chosen:updated");
-			    	$('.page-filter__toggle').toggleClass('open');
-			    	$('[data-toggle="dropdown"]').parent().removeClass('open');
-			    	return false;
-			    });
+        $('[data-tooltip]').tooltip({
+            container: 'body'
+        });
+
+        $(function() {
+            $('[data-popover]').popover({
+                container: 'body',
+                trigger: 'hover',
+
+                html: true
+            })
+        })
+
+        $("[data-select").chosen();
 
 
-			    $('.sidebar-toggle').click(function () {
-			    	$('body').toggleClass('sidebar-collapse');
-			    	msnry.layout();
-			    	$("[data-select").chosen();
+        $('.toggle-filter').click(function() {
+            $(this).parent().toggleClass('open').trigger("chosen:updated");
+            $('.page-filter__toggle').toggleClass('open');
+            $('[data-toggle="dropdown"]').parent().removeClass('open');
+            return false;
+        });
 
 
-			    });
-
-				$('.autoselect').OneClickSelect();
-			
-
-
-			});
-
-        </script>
-    </head>
-
-    <body class="sidebar-collapse">
-
-    	<header class="site-header" id="site-header" role="banner">
-			    <div class="site-header__logo">
-			    	<a href="/">
-			        	<img src="img/logo.png" alt="Sale Stock Dashboard">
-			        </a>
-			    </div>
-			  
+        $('.sidebar-toggle').click(function() {
+            $('body').toggleClass('sidebar-collapse');
+            $("[data-select").chosen();
 
 
-			        <ul class="site-header__user">
-			            <li>
-			            	<a href="#">
-			            		<div class="site-header__avatar">
-			            			<img src="img/cewe.png" alt="">
-			            		</div>
+        });
 
-			            		<span>
-			            			Mbak Yeyen
-			            		</span>
-			            	</a>
-			            </li>
-			            <li>
+        $('.autoselect').OneClickSelect();
 
-			            	<a href="#">
-			            		<img src="svg/shutdown.svg" alt="Logout">
-			            	</a>
-			            </li>
-			        </ul>
-			    </div>
 
-		</header>
 
-		<!-- <div class="site-search">
-		    <div class="container">
-		        <div class="form-group form-group--flex">
-		            <div class="form-group__input">
-		                <input type="text" class="form-control" placeholder="Cari produk&hellip;">
-		            </div>
-		            <div class="form-group__btn">
-		                <button type="submit" class="btn btn--blue">Go</button>
-		            </div>
-		        </div>
-		    </div>
-		</div> -->
+    });
+    </script>
+</head>
 
+<body class="sidebar-collapse">
+
+
+
+    <div class="user-account">
+        <div class="vcard">
+            <span>
+                mbak.yeyen@salestock.id
+            </span>
+        </div>
+        <div class="logout">
+            <a href="#">
+                Logout
+            </a>
+        </div>
+    </div>
 
     <div class="main" id="main" role="main">
+        <div class="sidebar">
+            <div class="site-headers">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="site-menu">
+                <ul>
+                    
+                    <li>
+                        <a href="product.html">
+                            <img src="svg/cloth.svg">
+                            <span>Produk <i class="badge badge--red">45</i></span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="order.html">
+                            <img src="svg/cart-full.svg">
+                            <span>Transaksi <i class="badge badge--red">3245</i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="delivery.html">
+                            <img src="svg/truck-pending.svg">
+                            <span>Pengiriman <i class="badge badge--red">245</i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category.html">
+                            <img src="svg/categories.svg">
+                            <span>Kategori</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="catalogue.html"><img src="svg/list.svg"> <span>Catalogue</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
+                    </li>
+                </ul>
 
-
-
-
-      {{ content }}
+                <ul>
+                    <li>
+                        <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="member.html"><img src="svg/woman.svg"> <span>Pelanggan</span></a>
+                    </li>
+                    <li>
+                        <a href="admin.html"><img src="svg/alien.svg"> <span>Administrator</span></a>
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
+        </div>
+        {{ content }}
     </div>
-<!-- 
+    <!-- 
     <footer class="site-footer" id="site-footer">
-		<div class="container">
-			<div class="site-footer__copy">
-				<small>&copy; 2015 Sale Stock Indonesia</small>
-			</div>
-		</div>
-	</footer> -->
+        <div class="container">
+            <div class="site-footer__copy">
+                <small>&copy; 2015 Sale Stock Indonesia</small>
+            </div>
+        </div>
+    </footer> -->
 
 
 
+    <div class="modal" id="bank-confirmation-modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Bukti Transfer</h4>
+                </div>
+                <div class="modal-body">
+                    <figure>
+                        <img src="http://www.rudhy151.com/content/uploads/bukti-transksi-rudhy151-agen-hp-replika-115.jpg" alt="">
+                    </figure>   
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-left">
+                        <button type="button" class="btn btn--default" data-dismiss="modal">Tutup</button>
+                    </div>  
+                    <div class="pull-right">
+                        <a href="detail-order.html" class="btn btn--default">Detail Order</a>
+                        <button type="button" class="btn btn--red">Sudah dibayar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <div class="modal" id="media-library-modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Media</h4>
+                </div>
+                <div class="modal-body">
+                    <figure>
+                        <img src="http://i.ss-cdn.net/product_images/0f2d39d439187c69835757f9161df867_600.jpg" alt="">
+                    </figure>   
+
+                    <div class="table-overflow">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Nama</td>
+                                    <td><a href="http://i.ss-cdn.net/product_images/d486ea864580ee10a755bb15549fe207_600.jpg" target="_Blank">Eidel Ruffle Peplum Midi Skirt</a></td>
+                                </tr>
+                                <tr>
+                                    <td>URL</td>
+                                    <td class="nowrap"><span class="autoselect">http://i.ss-cdn.net/product_images/d486ea864580ee10a755bb15549fe207_600.jpg</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jenis</td>
+                                    <td>image/jpg</td>
+                                </tr>
+                                <tr>
+                                    <td>Ukuran</td>
+                                    <td>1,75Mb</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimensi</td>
+                                    <td>600&times;600px</td>
+                                </tr>
+                                <tr>
+                                    <td>Tanggal</td>
+                                    <td>Rabu, 29-7-2015, 16:46</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-left">
+                        <button type="button" class="btn btn--default" data-dismiss="modal">Tutup</button>
+                    </div>  
+                    <div class="pull-right">
+                        <button type="button" class="btn btn--red">Hapus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+</body>
 
-
-    </body>
 </html>
-
-

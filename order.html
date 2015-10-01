@@ -1,0 +1,190 @@
+---
+layout: dashboard
+---
+
+
+<div class="mainbar">
+
+        <div class="page">
+            <div class="page-header">
+                <div class="container">
+                    <ul class="page-header__breadcrumb">
+                        <li><a href="/">Dashboard</a></li>
+                    </ul>
+                    <h1 class="page-header__title">
+                        Transaksi
+                    </h1>
+
+                    <div class="page-filter">
+                        <div class="page-filter__control">
+                            <ul class="pull-left">
+                                <li class="toggle">
+                                    <a href="#" class="toggle-filter"><img src="svg/filter.svg" alt=""> Filter <span class="caret"></span></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" data-toggle="dropdown">
+                                        <img src="svg/todo.svg" alt=""> Bulk action <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Paid</a></li>
+                                        <li><a href="#">Shipped</a></li>
+                                        <li><a href="#">Canceled</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="pull-right">
+                                <div class="page-search">
+                                    <input type="search" class="form-control" placeholder="Masukkan kata kunci&hellip;">
+                                    <button type="submit"><img src="svg/search.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-filter__toggle">
+                            <form id="filter-form">
+                                <div class="row">
+                                    <div class="col">
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label">Order ID</label>
+                                            <input name="orderId" type="text" class="form-control" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Tanggal</label>
+                                            <div class="form-input form-input--daterange">
+                                                <input type="text" class="form-control" id="datePickerStart" placeholder="Tanggal awal">
+                                                <input type="text" class="form-control" id="datePickerEnd" placeholder="Tanggal akhir">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Nama/Email/Telpon</label>
+                                            <input name="name" type="text" class="form-control" value="">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        
+                                       
+                                        
+                                    </div>
+                                    <div class="col">
+
+                                        <div class="form-group">
+                                            <label class="form-label">Jumlah</label>
+                                            <div class="form-input form-input--daterange">
+                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label">SKU</label>
+                                            <input name="sku" type="text" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label class="form-label">Lokasi Pengiriman</label>
+                                            <select class="form-control" multiple data-select>
+                                                <option value="">Aceh</option>
+                                                <option value="bank_transfer">Bali</option>
+                                                <option value="cod">Sumatera Utara</option>
+                                                <option value="cod">Sumatera Barat</option>
+                                                <option value="cod">Sumatera Selatan</option>
+                                                <option value="cod">Jambi</option>
+                                                <option value="cod">Riau</option>
+                                                <option value="cod">Sumatera Kep. Riau</option>
+                                                <option value="cod">Kalimantan Barat</option>
+                                                <option value="cod">Kalimantan Tengah</option>
+                                                <option value="cod">Kalimantan Timur</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Status</label>
+                                            <select class="form-control" multiple data-select>
+                                                <option value="">Semua</option>
+                                                <option value="pending">Pending</option>
+                                                <option value="verifying_payment">Verifying Payment</option>
+                                                <option value="processing">Sudah di bayar</option>
+                                                <option value="cancelled">Batal</option>
+                                                <option value="shipped">Terkirim</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Pembayaran</label>
+                                            <select class="form-control" multiple data-select>
+                                                <option>Semua</option>
+                                                <option>COD</option>
+                                                <option>Bank Transfer</option>
+                                                <option>&mdash; BCA</option>
+                                                <option>&mdash; Mandiri</option>
+                                                <option>&mdash; BRI</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-action">
+                                    <a id="reset-btn" class="btn btn--default">Reset</a>
+                                    <button class="btn btn--blue">Filter</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="page-body">
+                <div class="page-heading">
+                    <div class="container">
+                        <h2>Menampilkan 3245 Transaksi</h2>
+
+                        <div class="page-header__control pull-right">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn--default"><img src="svg/refresh.svg" alt=""> Refresh</a>
+                                <a href="#" class="btn btn--default"><img src="svg/csv.svg" alt=""> Export</a>
+                            </div>
+                            <a href="#" class="btn btn--red">Transaksi Baru</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-overflow">
+                    {% include data-order.html %}
+                </div>
+                <div class="pagination">
+                    <ul>
+                        <li><a href="#">First</a></li>
+                        <li><a href="#">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><span>&hellip;</span></li>
+                        <li><a href="#">235</a></li>
+                        <li><a href="#">236</a></li>
+                        <li><a href="#">237</a></li>
+                        <li><a href="#">238</a></li>
+                        <li><a href="#">239</a></li>
+                        <li><a href="#">Next</a></li>
+                        <li><a href="#">Last</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</div>
+<script type="text/javascript">
+var picker = new Pikaday({
+    field: document.getElementById('datePickerStart'),
+    onSelect: function() {
+        picker2.setMinDate(this.getDate());
+    }
+});
+var picker2 = new Pikaday({
+    field: document.getElementById('datePickerEnd'),
+    onSelect: function() {
+        picker.setMaxDate(this.getDate());
+    }
+});
+</script>

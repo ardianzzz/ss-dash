@@ -2,74 +2,18 @@
 layout: dashboard
 ---
 
-<div class="sidebar">
-    <div class="site-headers">
-        <img src="img/logo.png" alt="">
-    </div>
-    <div class="site-menu">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="svg/categories.svg">
-                    <span>Kategori</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="svg/cloth.svg">
-                    <span>Produk <i class="badge badge--red">45</i></span>
-                </a>
-            </li>
-            <li class="active">
-                <a href="#">
-                    <img src="svg/cart-full.svg">
-                    <span>Transaksi <i class="badge badge--red">3245</i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="svg/woman.svg"> <span>Pelanggan</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/nurse.svg"> <span>Administrator</span></a>
-            </li>
-        </ul>
-    </div>
-    <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
-</div>
+
 <div class="mainbar">
     <div class="page">
         <div class="page-header">
             <div class="container">
                 <ul class="page-header__breadcrumb">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Produk</a></li>
+                    <li><a href="/">Dashboard</a></li>
+                    <li><a href="product.html">Produk</a></li>
                 </ul>
                 <h1 class="page-header__title">
-                        Tambah Produk
-                    </h1>
-                <!-- <div class="page-header__tabnav">
-                        <div class="btn-group">
-                            <a href="#" class="btn btn--line active">Baru</a>
-                            <a href="#" class="btn btn--line">Arsip</a>
-                            <a href="#" class="btn btn--line">Batal</a>
-                        </div>
-                    </div> -->
-                <!-- <div class="page-header__control pull-right">
-                        <a href="#" class="btn btn--red">Tambah Order</a>
-                    </div> -->
+                    Tambah Produk
+                </h1>
             </div>
         </div>
         <div class="page-body">
@@ -88,7 +32,14 @@ layout: dashboard
                                     <div class="form-group">
                                         <label class="form-label form-label--required">Kode</label>
                                         <div class="form-input">
-                                            <input type="text" class="form-control">
+                                            <div class="row">
+                                                <div class="col col--10">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col col--2">
+                                                    <button class="btn btn--default btn--block">Generate</button>
+                                                </div>
+                                            </div>                                    
                                         </div>
                                     </div>
                                     <div class="form-group">

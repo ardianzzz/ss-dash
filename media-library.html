@@ -2,86 +2,18 @@
 layout: dashboard
 ---
 
-<div class="sidebar">
-    <div class="site-headers">
-        <img src="img/logo.png" alt="">
-    </div>
-    <div class="site-menu">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="svg/categories.svg"> 
-                    <span>Kategori</span>
-                </a>
-            </li>
-            <li class="active">
-                <a href="#">
-                    <img src="svg/cloth.svg"> 
-                    <span>Produk <i class="badge badge--red">45</i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="svg/cart-full.svg"> 
-                    <span>Transaksi <i class="badge badge--red">3245</i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="svg/woman.svg"> <span>Pelanggan</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/nurse.svg"> <span>Administrator</span></a>
-            </li>
-        </ul>
-    </div>
-
-    <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
-</div>
 <div class="mainbar">
-
-        <div class="page">
-            <div class="page-header">
-                <div class="container">
-                    <ul class="page-header__breadcrumb">
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Produk</a></li>
-                    </ul>
-                    <h1 class="page-header__title">
-                    Pustaka Media
-                       </h1>
-               <!--  <div class="page-header__tabnav">
-                    <div class="btn-group">
-                        <a href="#" class="btn btn--line active">Baru</a>
-                        <a href="#" class="btn btn--line">Arsip</a>
-                    </div>
-                </div>
-                <div class="page-header__control pull-right">
-                    <a href="#" class="btn btn--red">Tambah Produk</a>
-                </div> -->
-                </div>
+    <div class="page">
+        <div class="page-header">
+            <div class="container">
+                <ul class="page-header__breadcrumb">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Produk</a></li>
+                </ul>
+                <h1 class="page-header__title">Pustaka Media</h1>
                 <div class="page-filter">
                     <div class="page-filter__control">
                         <ul class="pull-left">
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown"><img src="svg/list.svg" alt=""> Table <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="product.html">Grid</a></li>
-                                    <li><a href="product-table.html">Table</a></li>
-                                </ul>
-                            </li>
                             <li class="toggle">
                                 <a href="#" class="toggle-filter"><img src="svg/filter.svg" alt=""> Filter <span class="caret"></span></a>
                             </li>
@@ -90,17 +22,11 @@ layout: dashboard
                                     <img src="svg/todo.svg" alt=""> Bulk action <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Paid</a></li>
-                                    <li><a href="#">Shipped</a></li>
-                                    <li><a href="#">Canceled</a></li>
+                                    <li><a href="#">Delete</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#"><img src="svg/refresh.svg" alt=""> Refresh</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="svg/csv.svg" alt=""> Export</span>
                                 </a>
                             </li>
                         </ul>
@@ -183,43 +109,38 @@ layout: dashboard
                     </div>
                 </div>
             </div>
-            <div class="page-body">
-
-                <div class="page-heading">
-                    <div class="container">
-                        <h2>Menampilkan 3245 Media</h2>
-
-                        <div class="page-header__control pull-right">
-                            <div class="btn-group">
-                            </div>
-                            <a href="#" class="btn btn--red">Tambahkan Media</a>
+        </div>
+        <div class="page-body">
+            <div class="page-heading">
+                <div class="container">
+                    <h2>Menampilkan 3245 Media</h2>
+                    <div class="page-header__control pull-right">
+                        <div class="btn-group">
                         </div>
+                        <a href="#" class="btn btn--red">Tambahkan Media</a>
                     </div>
                 </div>
-                
-                {% include data-media.html %}
-
-                <div class="pagination">
-                    <ul>
-                        <li><a href="#">First</a></li>
-                        <li><a href="#">Prev</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><span>…</span></li>
-                        <li><a href="#">235</a></li>
-                        <li><a href="#">236</a></li>
-                        <li><a href="#">237</a></li>
-                        <li><a href="#">238</a></li>
-                        <li><a href="#">239</a></li>
-                        <li><a href="#">Next</a></li>
-                        <li><a href="#">Last</a></li>
-                    </ul>
-                </div>
-
+            </div>
+            {% include data-media.html %}
+            <div class="pagination">
+                <ul>
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Prev</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>…</span></li>
+                    <li><a href="#">235</a></li>
+                    <li><a href="#">236</a></li>
+                    <li><a href="#">237</a></li>
+                    <li><a href="#">238</a></li>
+                    <li><a href="#">239</a></li>
+                    <li><a href="#">Next</a></li>
+                    <li><a href="#">Last</a></li>
+                </ul>
             </div>
         </div>
     </div>
-
+</div>

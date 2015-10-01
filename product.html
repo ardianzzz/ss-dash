@@ -2,87 +2,17 @@
 layout: dashboard
 ---
 
-<div class="sidebar">
-    <div class="site-headers">
-        <img src="img/logo.png" alt="">
-    </div>
-    <div class="site-menu">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="svg/categories.svg"> 
-                    <span>Kategori</span>
-                </a>
-            </li>
-            <li class="active">
-                <a href="#">
-                    <img src="svg/cloth.svg"> 
-                    <span>Produk <i class="badge badge--red">45</i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="svg/cart-full.svg"> 
-                    <span>Transaksi <i class="badge badge--red">3245</i></span>
-                </a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="svg/woman.svg"> <span>Pelanggan</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/nurse.svg"> <span>Administrator</span></a>
-            </li>
-        </ul>
-    </div>
-
-    <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
-</div>
 <div class="mainbar">
-
-        <div class="page">
-            <div class="page-header">
-                <div class="container">
-                    <ul class="page-header__breadcrumb">
-                        <li><a href="#">Dashboard</a></li>
-                    </ul>
-                    <h1 class="page-header__title">
-                    Produk
-                </h1>
-                    <!-- <div class="page-header__tabnav">
-                        <div class="btn-group">
-                            <a href="#" class="btn btn--line active">Baru</a>
-                            <a href="#" class="btn btn--line">Arsip</a>
-                        </div>
-                    </div> -->
-                    <div class="page-header__control pull-right">
-                        <a href="#" class="btn btn--red">Tambah Produk</a>
-                    </div> 
-                </div>
-            </div>
-            <div class="page-body">
+    <div class="page">
+        <div class="page-header">
+            <div class="container">
+                <ul class="page-header__breadcrumb">
+                    <li><a href="/">Dashboard</a></li>
+                </ul>
+                <h1 class="page-header__title">Produk</h1>
                 <div class="page-filter">
                     <div class="page-filter__control">
                         <ul class="pull-left">
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown"><img src="svg/list.svg" alt=""> Grid <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="product.html">Grid</a></li>
-                                    <li><a href="product-table.html">Table</a></li>
-                                </ul>
-                            </li>
                             <li class="toggle">
                                 <a href="#" class="toggle-filter"><img src="svg/filter.svg" alt=""> Filter <span class="caret"></span></a>
                             </li>
@@ -183,373 +113,47 @@ layout: dashboard
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="page-body">
 
+            <div class="page-heading">
                 <div class="container">
-                    <div class="product-masonry">
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:72%;">
-                                    <img src="http://i.ss-cdn.net/product_images/ed313db67095104c93ef2761e02e539e_600.jpg" alt="Vieradine Button Zipper Blouse">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__name">Vieradine Button Zipper Blouse</div>
-                                    <div class="product-card__meta">
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn-dropdown dropdown">
-                                    <a href="#" class="btn btn--line btn--small" data-toggle="dropdown" aria-expanded="true">X <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Delete</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <h2>Menampilkan 100 dari 3456 Produk</h2>
+
+                    <div class="page-header__control pull-right">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn--default"><img src="svg/refresh.svg" alt=""> Refresh</a>
+                            <a href="#" class="btn btn--default"><img src="svg/csv.svg" alt=""> Export</a>
                         </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:80%;">
-                                    <img src="http://i.ss-cdn.net/product_images/9a0812d4a8fa0971daea91ad89846987_600.jpg" alt="Risana Ethnic Batik Dress">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Risana Ethnic Batik Dress</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn-dropdown dropdown">
-                                    <a href="#" class="btn btn--line btn--small" data-toggle="dropdown" aria-expanded="true">X <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Delete</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/fa60f3751d039bf05f08c377ecc9d832_500.jpg" alt="Lauda Double Strap Sandals">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Lauda Double Strap Sandals</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn-dropdown dropdown">
-                                    <a href="#" class="btn btn--line btn--small" data-toggle="dropdown" aria-expanded="true">X <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Delete</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:75%;">
-                                    <img src="http://i.ss-cdn.net/product_images/613d85d8901743701788de661dd6757e_600.jpg" alt="Ceanna Zebra Sleeveless Blouse">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Ceanna Zebra Sleeveless Blouse</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn-dropdown dropdown">
-                                    <a href="#" class="btn btn--line btn--small" data-toggle="dropdown" aria-expanded="true">X <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Delete</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:100%;">
-                                    <img src="http://i.ss-cdn.net/product_images/5fef77ca42fa65a7f187dcff4f07fc5d_600.jpg" alt="Arinis List LongSleeve Sweater">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Arinis List LongSleeve Sweater</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:100%;">
-                                    <img src="http://i.ss-cdn.net/product_images/437fea5e34334ad2e5b4833f1cf87264_600.jpg" alt="Nizarra Flowery Scuba Mini Dress">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Nizarra Flowery Scuba Mini Dress</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn-dropdown dropdown">
-                                    <a href="#" class="btn btn--line btn--small" data-toggle="dropdown" aria-expanded="true">X <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Delete</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:100%;">
-                                    <img src="http://i.ss-cdn.net/product_images/9423af9a1b08de33cd11385314d0b016_600.jpg" alt="Nisaffa Flowery Scuba Mini Dress">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Nisaffa Flowery Scuba Mini Dress</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn-dropdown dropdown">
-                                    <a href="#" class="btn btn--line btn--small" data-toggle="dropdown" aria-expanded="true">X <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Edit</a></li>
-                                        <li><a href="#">Delete</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/ef9842f79a6f9bbe4d293cf7d20b43a0_500.jpg" alt="Veli Tods Flat Shoes">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Veli Tods Flat Shoes</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/d23ee600b0d6597fd85ec1f35df38cd3_600.jpg" alt="Marylin Flowery Emboss Mini Dress">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Marylin Flowery Emboss Mini Dress</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/d9b7482d92e3cb31fde73851cee34f38_600.jpg" alt="Hattie Frost Diamond Ballet Flats Shoes">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Hattie Frost Diamond Ballet Flats Shoes</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/d9b7482d92e3cb31fde73851cee34f38_600.jpg" alt="Hattie Frost Diamond Ballet Flats Shoes">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Hattie Frost Diamond Ballet Flats Shoes</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/bfd91c2ac1a39fdaa484b66da1119ca3_600.jpg" alt="Caldora Big Rope Necklace">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Caldora Big Rope Necklace</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/695018192f5d26e31f2a3782141183b6_600.jpg" alt="Bayuni Braid Classic Necklace">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Bayuni Braid Classic Necklace</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/0404d61074f8c5c30e402c13012f0c69_600.jpg" alt="Glafira Chains Aloy Necklace">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Glafira Chains Aloy Necklace</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/4c09638a2eb24143da00b6a24a599f22_600.jpg" alt="Quionia Ethnic Silver Flamer Brooch">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Quionia Ethnic Silver Flamer Brooch</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/6343fc676c5e35e737792ed78886ed81_600.jpg" alt="Zoeline Ribbon Silver Belt">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Zoeline Ribbon Silver Belt</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:97%;">
-                                    <img src="http://i.ss-cdn.net/product_images/5c2ab9684fe6d5dd5d1c1d26d2c9a939_600.jpg" alt="Jamie Crystal Skull Bracelet">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Jamie Crystal Skull Bracelet</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:75%;">
-                                    <img src="http://i.ss-cdn.net/product_images/d32ec684589d64788047ad8a84de8fb1_600.jpg" alt="Sisuka Tartan Rayon Jumpsuit">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Sisuka Tartan Rayon Jumpsuit</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:84%;">
-                                    <img src="http://i.ss-cdn.net/product_images/28a1ffcc424dfed74ed20b39978187cf_500.jpg" alt="Jaslyn Bubbles Zara Dress">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Jaslyn Bubbles Zara Dress</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-masonry__brick">
-                            <div class="product-card">
-                                <div class="product-card__figure" style="padding-bottom:71%;">
-                                    <img src="http://i.ss-cdn.net/product_images/b722526cffcda5731e2d61883d209d8d_500.jpg" alt="Nailah Flowery Brukat Skort">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__meta">
-                                        <div class="product-card__name">Nailah Flowery Brukat Skort</div>
-                                        <div class="product-card__price">
-                                            <ins>90.000</ins>
-                                            <del>95.000</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="#" class="btn btn--blue">Produk Baru</a>
                     </div>
                 </div>
             </div>
 
+            <div class="table-overflow">
+                {% include data-product.html %}
+            </div>
+            
+            <div class="pagination">
+                <ul>
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Prev</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><span>&hellip;</span></li>
+                    <li><a href="#">235</a></li>
+                    <li><a href="#">236</a></li>
+                    <li><a href="#">237</a></li>
+                    <li><a href="#">238</a></li>
+                    <li><a href="#">239</a></li>
+                    <li><a href="#">Next</a></li>
+                    <li><a href="#">Last</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
+</div>

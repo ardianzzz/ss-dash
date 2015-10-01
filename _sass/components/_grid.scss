@@ -20,13 +20,13 @@
 
 .row {
     @extend .clearfix;
-    margin:0 -1.6rem;
+    margin:0 -.8rem;
 }
 
 .col {
 
     float:left;
-    padding:0 1.6rem;
+    padding:0 .8rem;
     
     &--2a {width: 20%}
     &--12{width:100%}

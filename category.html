@@ -2,82 +2,32 @@
 layout: dashboard
 ---
 
-<div class="sidebar">
-    <div class="site-headers">
-        <img src="img/logo.png" alt="">
-    </div>
-    <div class="site-menu">
-        <ul>
-            <li class="active">
-                <a href="#"><img src="svg/categories.svg"> Kategori</a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/cloth.svg"> Produk</a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/cart-full.svg"> Order</a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/combo-chart.svg"> Report</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="svg/bullhorn.svg"> Event</a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/coupon.svg"> Kupon</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="svg/woman.svg"> Pelanggan</a>
-            </li>
-            <li>
-                <a href="#"><img src="svg/nurse.svg"> Administrator</a>
-            </li>
-        </ul>
-    </div>
-</div>
 <div class="mainbar">
-    <div class="container">
-        <div class="page">
-            <div class="page-header">
-                <h1 class="page-header__title">
-                    <i class="page-title__icon">
-                        <img src="svg/categories.svg">
-                    </i>
-                    Kategori
-                </h1>
-                <div class="page-header__tabnav">
-                    <ul>
-                        <li class="active">
-                            <a href="#">Atur kategori</a>
-                        </li>
-                        <li>
-                            <a href="#">Katalog</a>
-                        </li>
-                        <li>
-                            <a href="#">Lookup</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="page">
+        <div class="page-header">
+            <div class="container">
+                <ul class="page-header__breadcrumb">
+                    <li><a href="/">Dashboard</a></li>
+                </ul>
+                <h1 class="page-header__title">Kategori</h1>
             </div>
-            <div class="page-body">
+        </div>
+        <div class="page-body">
+            <div class="container">
                 <div class="row">
-                    
                     <div class="col col--8">
                         <div class="card">
+                            <div class="card__header">
+                                <h3 class="card__title">Daftar Kategori</h3>
+                            </div>
                             {% include data-category.html %}
                         </div>
                     </div>
-
                     <div class="col col--4">
-                        <div class="card card--bordered">
+                        <div class="card">
                             <div class="card__header">
                                 <h3 class="card__title">Tambah kategori</h3>
                             </div>
-
                             <div class="card__body">
                                 <div class="form-group">
                                     <label class="form-label form-label--required">Judul kategori</label>
@@ -85,7 +35,6 @@ layout: dashboard
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
-
                                 <div class="form-group">
                                     <label class="form-label">Induk kategori</label>
                                     <div class="form-input">
@@ -99,23 +48,21 @@ layout: dashboard
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label class="form-label">Terbitkan</label>
-                                    <div class="radio radio--inline">
-                                        <label>
-                                            <input type="radio" name="n" id="categoryModalPublished" chacked>
-                                            <span>Ya</span>
-                                        </label>
-                                    </div>
-                                    <div class="radio radio--inline">
-                                        <label>
-                                            <input type="radio" name="n">
-                                            <span>Tidak</span>
-                                        </label>
-                                    </div>
-                                </div>
-
+                                <!-- <div class="form-group">
+                                        <label class="form-label">Terbitkan</label>
+                                        <div class="radio radio--inline">
+                                            <label>
+                                                <input type="radio" name="n" checked>
+                                                <span>Ya</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio radio--inline">
+                                            <label>
+                                                <input type="radio" name="n">
+                                                <span>Tidak</span>
+                                            </label>
+                                        </div>
+                                    </div> -->
                                 <div class="form-group">
                                     <label class="form-label">Gambar kategori</label>
                                     <div class="uploader">
@@ -124,69 +71,58 @@ layout: dashboard
                                                 <canvas id="xx" style="width:100%;height:100%;"></canvas>
                                             </div>
                                         </div>
-
                                         <div>
                                             <label class="uploader__label btn btn--default btn--small">
                                                 Cari gambar
                                                 <input type="file" id="file" name="file">
                                             </label>
                                         </div>
-
-
-
                                         <script>
-                                            var input = document.getElementById("file");
-                                            input.addEventListener("change", function(event) {
-                                                // get the image file to compress
-                                                var file = event.target.files[0];
-                                                // compress
-                                                compress(file, 90/100, 600);
-                                            }, false);
+                                        var input = document.getElementById("file");
+                                        input.addEventListener("change", function(event) {
+                                            // get the image file to compress
+                                            var file = event.target.files[0];
+                                            // compress
+                                            compress(file, 90 / 100, 600);
+                                        }, false);
 
-                                            function compress(file, quality, maxwidth)
-                                            {
-                                                var reader = new FileReader();
-                                                            
-                                                reader.onloadend = function()
-                                                {
-                                                    var img, cvs;
-                                                    
-                                                    img = new Image();
-                                                    img.src = reader.result;
-                                                
-                                                    img.onload = function()
-                                                    {
-                                                        // resize image while keeping aspect ratio
-                                                        if (maxwidth && img.width > maxwidth)
-                                                        {
-                                                            ratio = img.width/maxwidth;
-                                                            img.width = img.width/ratio;
-                                                            img.height = img.height/ratio;
-                                                        }
-                                                        
-                                                        // compress
-                                                        cvs = document.getElementById("xx");
-                                                        cvs.width = img.width;
-                                                        cvs.height = img.height;
-                                                        cvs.getContext("2d").fillRect(0, 0, img.width, img.height);
-                                                        cvs.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
-                                                        
-                                                        // append the compressed image
-                                                        output = cvs.toDataURL("image/jpeg", quality);
-                                                        console.log(output);
+                                        function compress(file, quality, maxwidth) {
+                                            var reader = new FileReader();
+
+                                            reader.onloadend = function() {
+                                                var img, cvs;
+
+                                                img = new Image();
+                                                img.src = reader.result;
+
+                                                img.onload = function() {
+                                                    // resize image while keeping aspect ratio
+                                                    if (maxwidth && img.width > maxwidth) {
+                                                        ratio = img.width / maxwidth;
+                                                        img.width = img.width / ratio;
+                                                        img.height = img.height / ratio;
                                                     }
+
+                                                    // compress
+                                                    cvs = document.getElementById("xx");
+                                                    cvs.width = img.width;
+                                                    cvs.height = img.height;
+                                                    cvs.getContext("2d").fillRect(0, 0, img.width, img.height);
+                                                    cvs.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
+
+                                                    // append the compressed image
+                                                    output = cvs.toDataURL("image/jpeg", quality);
+                                                    console.log(output);
                                                 }
-                                                reader.readAsDataURL(file);
                                             }
+                                            reader.readAsDataURL(file);
+                                        }
                                         </script>
                                     </div>
                                 </div>
-
-                               
                             </div>
-
                             <div class="card__footer">
-                                 <div class="form-action">
+                                <div class="form-action">
                                     <button type="submit" class="btn btn--blue btn--small">Tambah kategori</button>
                                 </div>
                             </div>
