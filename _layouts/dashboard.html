@@ -77,6 +77,11 @@
 
         $('.autoselect').OneClickSelect();
 
+        $(".dropdown-select li a").click(function(){
+          $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+          $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+        });
+
 
 
     });
@@ -102,29 +107,42 @@
 
     <div class="main" id="main" role="main">
         <div class="sidebar">
-            <div class="site-headers">
-                <img src="img/logo.png" alt="">
+            <div class="site-header">
+                <a href="/">
+                    <div class="logo-a">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="logo-b">
+                        <img src="img/ss-logo.png" alt="">
+                    </div>
+                </a>
             </div>
             <div class="site-menu">
                 <ul>
                     
                     <li>
                         <a href="product.html">
-                            <img src="svg/cloth.svg">
+                            <img src="svg/dress.svg">
                             <span>Produk <i class="badge badge--red">45</i></span>
                         </a>
                     </li>
                     <li class="active">
                         <a href="order.html">
                             <img src="svg/cart-full.svg">
-                            <span>Transaksi <i class="badge badge--red">3245</i></span>
+                            <span>Order <i class="badge badge--red">3245</i></span>
                         </a>
                     </li>
                     <li>
                         <a href="delivery.html">
                             <img src="svg/truck-pending.svg">
-                            <span>Pengiriman <i class="badge badge--red">245</i></span>
+                            <span>As O Ready <i class="badge badge--red">245</i></span>
                         </a>
+                    </li>
+                </ul>
+                
+                <ul>
+                    <li>
+                        <a href="catalogue.html"><img src="svg/list.svg"> <span>Catalogue</span></a>
                     </li>
                     <li>
                         <a href="category.html">
@@ -132,20 +150,21 @@
                             <span>Kategori</span>
                         </a>
                     </li>
-                </ul>
+                </ul>   
+
                 <ul>
                     <li>
-                        <a href="catalogue.html"><img src="svg/list.svg"> <span>Catalogue</span></a>
+                        <a href="#"><img src="svg/bullhorn.svg"> <span>Promo</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="svg/bullhorn.svg"> <span>Event</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="svg/coupon.svg"> <span>Kupon</span></a>
+                        <a href="coupon.html"><img src="svg/coupon.svg"> <span>Kupon</span></a>
                     </li>
                 </ul>
 
                 <ul>
+                    <li>
+                        <a href="media-library.html"><img src="svg/hdd.svg"> <span>Pustaka Media</span></a>
+                    </li>
                     <li>
                         <a href="#"><img src="svg/combo-chart.svg"> <span>Report</span></a>
                     </li>
@@ -158,8 +177,19 @@
                         <a href="admin.html"><img src="svg/alien.svg"> <span>Administrator</span></a>
                     </li>
                 </ul>
+
+                <ul class="sidebar-control">
+                    <li>
+                        <a href="javascript:void(0);" class="sidebar-toggle">
+                            <img src="svg/undo.svg">
+                            <span class="a">Persempit menu</span>
+                            <span class="b">Perbesar menu</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <a href="javascript:void(0);" class="sidebar-toggle">≤≤</a>
+
+            
         </div>
         {{ content }}
     </div>
@@ -175,11 +205,11 @@
 
 
     <div class="modal" id="bank-confirmation-modal">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Bukti Transfer</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <figure>
@@ -201,11 +231,11 @@
 
 
     <div class="modal" id="media-library-modal">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Media</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <figure>

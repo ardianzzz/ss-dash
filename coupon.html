@@ -9,11 +9,11 @@ layout: dashboard
                 <ul class="page-header__breadcrumb">
                     <li><a href="/">Dashboard</a></li>
                 </ul>
-                <h1 class="page-header__title">Order</h1>
+                <h1 class="page-header__title">Kupon</h1>
                 <div class="page-filter">
                     <div class="page-filter__control">
                         <ul class="pull-left">
-                            <li class="toggle open">
+                            <li class="toggle">
                                 <a href="#" class="toggle-filter"><img src="svg/filter.svg" alt=""> Filter <span class="caret"></span></a>
                             </li>
                             <li class="dropdown">
@@ -34,7 +34,7 @@ layout: dashboard
                             </div>
                         </div>
                     </div>
-                    <div class="page-filter__toggle open">
+                    <div class="page-filter__toggle">
                         <form id="filter-form">
                             <div class="row">
                                 <div class="col">
@@ -140,12 +140,116 @@ layout: dashboard
                             <a href="#" class="btn btn--default"><img src="svg/refresh.svg" alt=""> Refresh</a>
                             <a href="#" class="btn btn--default"><img src="svg/csv.svg" alt=""> Export</a>
                         </div>
-                        <a href="#" class="btn btn--blue">Transaksi Baru</a>
+                        <a href="#" class="btn btn--blue">Kupon Baru</a>
                     </div>
                 </div>
             </div>
             <div class="table-overflow">
-                {% include data-order.html %}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="th__check">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="selectAll"><span></span></label>
+                                </div>
+                            </th>
+                            <th>Label</th>
+                            <th>Name</th>
+                            <th>Nilai diskon</th>
+                            <th>Stok</th>
+                            <th>Penggunaan</th>
+                            <th>Pembelian min</th>
+                            <th>Mulai</th>
+                            <th>Selesai</th>
+                            <th>Member</th>
+                            <th>    
+                                &nbsp;
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="td__check">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="selectAll"><span></span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#">Diskon Sumpah Pemuda</a>
+                            </td>
+                            <td>
+                                <span class="autoselect">28OKT</span>
+                            </td>
+                            <td>
+                                10.000
+                            </td>
+                            <td>
+                                9998
+                            </td>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                &mdash;
+                            </td>
+                            <td>
+                                Rabu, 28-10-2015, 00:00
+                            </td>
+                            <td>
+                                Rabu, 29-10-2015, 00:00
+                            </td>
+                            <td>
+                                <span class="badge badge--green">Ya</span>
+                            </td>
+                            <td class="nowrap" style="width:1%">
+                                <a href="#" class="btn btn--default">Edit</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="td__check">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="selectAll"><span></span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#">Diskon Hari Pahlawan</a>
+                            </td>
+                            <td>
+                                <span class="autoselect">BUNGTOMO</span>
+                            </td>
+                            <td>
+                                5%
+                            </td>
+                            <td>
+                                9999
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                &mdash;
+                            </td>
+                            <td>
+                                Selasa, 10-11-2015, 00:00
+                            </td>
+                            <td>
+                                Selasa, 11-11-2015, 00:00
+                            </td>
+                            <td>
+                                <span class="badge badge--red">Tidak</span>
+                            </td>
+                            <td class="nowrap" style="width:1%">
+                                <a href="#" class="btn btn--default">Edit</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
             </div>
             <div class="pagination">
                 <ul>
@@ -153,15 +257,9 @@ layout: dashboard
                     <li><a href="#">Prev</a></li>
                     <li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
+                    <li><span>&hellip;</span></li>
                     <li><a href="#">3</a></li>
                     <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><span>&hellip;</span></li>
-                    <li><a href="#">235</a></li>
-                    <li><a href="#">236</a></li>
-                    <li><a href="#">237</a></li>
-                    <li><a href="#">238</a></li>
-                    <li><a href="#">239</a></li>
                     <li><a href="#">Next</a></li>
                     <li><a href="#">Last</a></li>
                 </ul>
